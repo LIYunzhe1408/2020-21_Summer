@@ -1,0 +1,49 @@
+将MinGWDeveloper的Sorts程序改编成VS(VS2019)程序
+
+一、创建一个空工程文件（项目文件）
+1. 启动VS2019
+2. 创建新项目→空项目（C++ Windows 控制台）→下一步
+3. 修改项目名称（如：Sorts）→创建
+
+二、将已经存在的文件添加至工程文件中
+1. 将MinGW Developer Studio集成开发环境编写的源代码文件（*.cpp、*.h）
+拷贝至VS工程文件对应文件夹的Sotrs文件夹中。
+2. 项目→添加现有项→（选择所有.cpp、.h文件）→添加
+3. 文件→全部保存（或全部保存图标Ctrl+Shift+S）
+
+三、修改源程序文件
+1. MyRand.cpp文件
+添加条件编译预处理语句
+#ifndef M_PI
+#define M_PI		3.14159265358979323846
+#endif
+
+2. Score.cpp文件
+第12行 variance=6*6; 改成variance = 6.0*6.0;
+第15行 sprintf改成sprintf_s
+
+3. Main.cpp文件
+第14行，将t定义成static double t = double(clock());
+第15-16行，将clock(),改成double(clock())
+第24行，将data[i] = n-1-i;改成 data[i] = T(T(n)-1-i);
+第25行，将data[i] = i;改成 data[i] = T(i);
+第85行 srand(time(NULL)); 改成srand((unsigned int)time(NULL));
+
+四、修改程序的属性
+项目→Sorts属性→C/C++→
+常规→
+将警告视为错误：否（/WX-）
+SDL检查：否（/sdl-）
+
+代码生成→
+较小类型检查：否
+安全检查：禁用安全检查(/GS-)
+
+语言→
+符合模式：否（不将const char*转换成char*视为错误）
+
+项目→Sorts属性→链接器→
+系统→
+堆栈保留大小：100000000（VS的栈空间默认仅有1MB，很容易栈溢出）
+
+这样，改变了栈空间的大小（扩大了将近100倍），因此原来完全正序、完全逆序，进行快速排序时不断递归导致栈溢出的现象不出现。

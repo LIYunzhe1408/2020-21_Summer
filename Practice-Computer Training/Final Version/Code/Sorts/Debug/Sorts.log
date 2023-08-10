@@ -1,0 +1,4 @@
+﻿  Main.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\ostream(746,1): warning C4530: 使用了 C++ 异常处理程序，但未启用展开语义。请指定 /EHsc
+C:\Users\16690\Desktop\Sorts-VS\Sorts\Main.cpp(90): message : 查看对正在编译的函数 模板 实例化“std::basic_ostream<char,std::char_traits<char>> &std::operator <<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,const char *)”的引用
+  Sorts.vcxproj -> C:\Users\16690\Desktop\Sorts-VS\Debug\Sorts.exe

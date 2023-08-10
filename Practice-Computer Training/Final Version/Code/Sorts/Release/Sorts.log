@@ -1,0 +1,17 @@
+﻿cl : 命令行 warning D9025: 正在重写“/sdl-”(用“/GS-”)
+  Main.cpp
+  MyRand.cpp
+  Score.cpp
+  SortString.cpp
+D:\本科教学\0830A033计算机程序设计实训\2021夏季学期\2020-2021《计算机编程实训》\Sorts-VS\Sorts\SortString.cpp(47,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\本科教学\0830A033计算机程序设计实训\2021夏季学期\2020-2021《计算机编程实训》\Sorts-VS\Sorts\SortString.cpp(69): message : 查看对正在编译的函数 模板 实例化“void GetStrings<char[20]>(char **&,const T (*),int)”的引用
+          with
+          [
+              T=char [20]
+          ]
+  正在生成代码
+  59 of 61 functions (96.7%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  Sorts.vcxproj -> D:\本科教学\0830A033计算机程序设计实训\2021夏季学期\2020-2021《计算机编程实训》\Sorts-VS\Release\Sorts.exe
